@@ -1,5 +1,6 @@
+"use strict";
 // Declando uma variável ou contante do tipo boolean
-var a = false;
+let a = false;
 console.log(a);
 console.log(typeof a);
 a = true;
