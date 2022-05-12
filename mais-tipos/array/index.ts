@@ -11,3 +11,8 @@ const nome: string[] = ['Flávia', 'Neusa', 'Alberto']
 //Usando métodos de array
 nome.push('Valentina')
 console.log(nome)
+
+// Outra sintaxe array
+const nums: Array<number> = [100, 200]
+nums.push(300)
+console.log(nums)

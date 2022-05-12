@@ -9,3 +9,7 @@ var nome = ['Flávia', 'Neusa', 'Alberto']
 //Usando métodos de array
 nome.push('Valentina')
 console.log(nome)
+// Outra sintaxe array
+var nums = [100, 200]
+nums.push(300)
+console.log(nums)
