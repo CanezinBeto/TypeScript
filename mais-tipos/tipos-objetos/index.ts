@@ -20,3 +20,13 @@ function showNumbers(a: number, b?: number, c?: number) {
   if (b) console.log(`B: ${b}`)
   if (c) console.log(`C: ${c}`)
 }
+
+// Validando uma parâmetros opcional
+// Por padrão o primeiro argumento de uma função não pode ser opcional
+function advancedGreeting(firstName: string, lastName?: string) {
+  if (lastName !== undefined) {
+    console.log(`Olá, ${firstName} ${lastName}, tudo bem?`)
+    return
+  }
+  console.log(`Olá, ${firstName}, tudo bem?`)
+}
