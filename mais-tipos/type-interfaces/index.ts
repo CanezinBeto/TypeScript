@@ -19,3 +19,32 @@ const coordObj: Point = {
 }
 
 showCoords(coordObj)
+
+// Type alias vs interfaces
+// Podemos incrementar uma interface ao longo do código, já o alias não é possivel
+interface Person {
+  name: string
+}
+
+interface Person {
+  age: number
+}
+
+const somePerson: Person = {
+  name: 'Alberto',
+  age: 32,
+}
+
+console.log(somePerson)
+
+// Declarando um type alias como objeto
+type personType = {
+  name: string
+}
+
+// Se tentarmos incrementar esse objeto criado com type alias ao longo do nosso código vai dar erro
+/*
+type personType = {
+  age: number
+}
+*/
