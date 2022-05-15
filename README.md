@@ -1,5 +1,5 @@
-# Curso de Typescript
+# TypeScript
 
-- Exercícios e teorias de Typescript para aprimorar meus conhecimentos.
+- Exercícios e teorias com TypeScript para aprimorar meus conhecimentos.
 
 <img src="./assets/typescript.jpg" />
