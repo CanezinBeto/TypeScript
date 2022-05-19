@@ -1,6 +1,7 @@
+"use strict";
 // Constraints, limitando os generics
 function biggestNumber(a, b) {
-    var bigges;
+    let bigges;
     if (+a > +b) {
         bigges = a;
     }

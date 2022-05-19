@@ -1,7 +1,7 @@
+"use strict";
 // Destructuring é utilizado com arrays e objetos.
-function showProductDetails(_a) {
-    var name = _a.name, price = _a.price;
-    return "O nome do produto \u00E9 ".concat(name, " e ele custa R$").concat(price);
+function showProductDetails({ name, price, }) {
+    return `O nome do produto é ${name} e ele custa R$${price}`;
 }
-var shirt = { name: 'Camisa', price: 49.99 };
+const shirt = { name: 'Camisa', price: 49.99 };
 console.log(showProductDetails(shirt));
