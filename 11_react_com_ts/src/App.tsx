@@ -6,6 +6,8 @@ import Destructuring, { Category } from './components/Destructuring'
 // Importe State
 import State from './components/State'
 import React, { createContext } from 'react'
+// Importando context
+import Context from './components/Context'
 
 // 1 - Variáveis
 const name: string = 'Alberto'
@@ -63,6 +65,7 @@ function App() {
 
         {myText && <p>Tem texto na variável</p>}
         {mySecondText && <p>Tem texto na variável</p>}
+        <Context />
       </div>
     </AppContext.Provider>
   )
