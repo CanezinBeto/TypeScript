@@ -1,3 +1,5 @@
+// 4 - Importação de componentes
+import FirstComponent from './components/FirstComponent'
 import React from 'react'
 
 // 1 - Variáveis
@@ -19,6 +21,9 @@ function App() {
       {isWorking ? <p>Está trabalhando</p> : <p>Não está trabalhando</p>}
 
       <h3>{userGreeting(name)}</h3>
+
+      {/* Inserindo o componente */}
+      <FirstComponent />
     </div>
   )
 }
