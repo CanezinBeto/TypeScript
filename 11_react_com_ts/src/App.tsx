@@ -6,6 +6,7 @@ import Destructuring, { Category } from './components/Destructuring'
 // Importe State
 import State from './components/State'
 import React from 'react'
+import { type } from '@testing-library/user-event/dist/type'
 
 // 1 - Variáveis
 const name: string = 'Alberto'
@@ -16,6 +17,11 @@ const isWorking: boolean = true
 const userGreeting = (name: string): string => {
   return `Olá, ${name}`
 }
+
+// Type
+type textOrNull = string | null
+const myText: textOrNull = 'Tem agum texto aqui'
+let mySecondText: textOrNull = null
 
 function App() {
   return (
@@ -39,6 +45,9 @@ function App() {
       />
 
       <State />
+
+      {myText && <p>Tem texto na variável</p>}
+      {mySecondText && <p>Tem texto na variável</p>}
     </div>
   )
 }
