@@ -1,6 +1,10 @@
 // 4 - Importação de componentes
 import FirstComponent from './components/FirstComponent'
+// 5 - Desestruturando props
+import SecondComponent from './components/SecondComponent'
+import Destructuring from './components/Destructuring'
 import React from 'react'
+import ts from 'typescript'
 
 // 1 - Variáveis
 const name: string = 'Alberto'
@@ -24,6 +28,13 @@ function App() {
 
       {/* Inserindo o componente */}
       <FirstComponent />
+      <SecondComponent name="Segundo" />
+      <Destructuring
+        title="Primeiro post"
+        content="Algum conteúdo"
+        commentsQty={10}
+        tags={['ts', 'js', 'jsx', 'tsx']}
+      />
     </div>
   )
 }
