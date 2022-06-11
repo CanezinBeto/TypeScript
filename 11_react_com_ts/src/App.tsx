@@ -3,8 +3,9 @@ import FirstComponent from './components/FirstComponent'
 // 5 - Desestruturando props
 import SecondComponent from './components/SecondComponent'
 import Destructuring from './components/Destructuring'
+// Importe State
+import State from './components/State'
 import React from 'react'
-import ts from 'typescript'
 
 // 1 - Variáveis
 const name: string = 'Alberto'
@@ -35,6 +36,8 @@ function App() {
         commentsQty={10}
         tags={['ts', 'js', 'jsx', 'tsx']}
       />
+
+      <State />
     </div>
   )
 }
