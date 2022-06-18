@@ -2,7 +2,7 @@
 // console.log('Express + TypeScript!!!')
 
 // 2 - Utilizando o Express
-import express, { Request, Response } from 'express'
+import express, { Request, Response, NextFunction } from 'express'
 const app = express()
 
 // Habilitando JSON
@@ -71,7 +71,7 @@ app.get('/api/product/:id/review/:reviewId', (req: Request, res: Response) => {
   return res.send(`Acessando a review ${reviewId} do produto ${productId}`)
 })
 
-// Router handler
+// 9 - Router handler
 function getUser(req: Request, res: Response) {
   console.log(`Resgatando o usuário com id: ${req.params.id}`)
 
@@ -79,6 +79,21 @@ function getUser(req: Request, res: Response) {
 }
 
 app.get('/api/user/:id', getUser)
+
+// 10 - Middleware
+function checkUser(req: Request, res: Response, next: NextFunction) {
+  if (req.params.id === '1') {
+    console.log('Pode proseguir!')
+    next()
+  } else {
+    console.log('Acesso restrito!')
+  }
+}
+
+// Ativando o middleware passando como segundo argumento
+app.get('/api/user/:id/access', checkUser, (req: Request, res: Response) => {
+  return res.json('Bem vindo a area ADM')
+})
 
 app.listen(3000, () => {
   console.log('Server Running')
