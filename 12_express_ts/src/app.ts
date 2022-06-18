@@ -5,6 +5,14 @@
 import express, { Request, Response, NextFunction } from 'express'
 const app = express()
 
+// 11 - Middleware para todas as rotas ( Geralmente este tipo de código vai no escopo )
+function showPath(req: Request, res: Response, next: NextFunction) {
+  console.log(req.path)
+  next()
+}
+
+app.use(showPath)
+
 // Habilitando JSON
 app.use(express.json())
 
