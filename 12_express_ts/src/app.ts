@@ -35,6 +35,16 @@ app.get('/api/interfaces', (req: Request, res: Response) => {
   return res.send('Utilizando as interfaces')
 })
 
+// 6 - Enviando JSON
+app.get('/api/json', (req: Request, res: Response) => {
+  return res.json({
+    name: 'Shirt',
+    price: 30.0,
+    color: 'Blue',
+    size: ['P', 'M', 'G'],
+  })
+})
+
 app.listen(3000, () => {
   console.log('Server Running')
 })
