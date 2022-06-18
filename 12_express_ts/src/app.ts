@@ -117,6 +117,17 @@ app.get(
   }
 )
 
+// 13 - Tratando erro
+app.get('/api/erro', (req: Request, res: Response) => {
+  try {
+    // Forçando um erro ( tratando a lógica )
+    throw new Error('Algum erro')
+  } catch (error: any) {
+    res.statusCode = 500
+    res.json({ msg: error.message })
+  }
+})
+
 app.listen(3000, () => {
   console.log('Server Running')
 })
