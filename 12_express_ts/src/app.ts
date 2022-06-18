@@ -103,6 +103,20 @@ app.get('/api/user/:id/access', checkUser, (req: Request, res: Response) => {
   return res.json('Bem vindo a area ADM')
 })
 
+// 12 - Req e Res com Generics
+app.get(
+  '/api/user/:id/details/:name',
+  (
+    req: Request<{ id: string; name: string }>,
+    res: Response<{ status: boolean }>
+  ) => {
+    console.log(`ID: ${req.params.id}`)
+    console.log(`Name: ${req.params.name}`)
+
+    return res.json({ status: true })
+  }
+)
+
 app.listen(3000, () => {
   console.log('Server Running')
 })
