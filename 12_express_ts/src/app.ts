@@ -2,7 +2,7 @@
 // console.log('Express + TypeScript!!!')
 
 // 2 - Utilizando o Express
-import express from 'express'
+import express, { Request, Response } from 'express'
 const app = express()
 
 // Habilitando JSON
@@ -28,6 +28,11 @@ app.all('/api/produto/check', (req, res) => {
   } else {
     return res.send('Não podemos realizar esta operação!')
   }
+})
+
+// 5 - Interfaces do Express
+app.get('/api/interfaces', (req: Request, res: Response) => {
+  return res.send('Utilizando as interfaces')
 })
 
 app.listen(3000, () => {
